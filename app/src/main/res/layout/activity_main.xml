@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/erd"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/profil"
+        android:layout_width="250px"
+        android:layout_height="250px"
+        app:layout_constraintTop_toBottomOf="@id/thumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="20px"
+        android:src="@drawable/fiqri"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_shape"
+        android:clipToOutline="true"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mY application"
+        app:layout_constraintStart_toEndOf="@id/profil"
+        app:layout_constraintTop_toBottomOf="@id/thumbnail"
+        android:layout_marginStart="10px"
+        android:textColor="@color/design_default_color_primary"/>
+    <TextView
+        android:id="@+id/name"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiqri Fauzi Ilham"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+    <Button
+        android:id="@+id/btn_keluar"
+        app:layout_constraintTop_toBottomOf="@id/thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5px"
+        android:text="Keluar"/>
+    <HorizontalScrollView
+        android:id="@+id/ic_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@id/profil"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img1"
+                android:contentDescription="Image 1"
+                android:padding="8dp" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img2"
+                android:contentDescription="Image 2"
+                android:padding="8dp" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img3"
+                android:contentDescription="Image 3"
+                android:padding="8dp" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img4"
+                android:contentDescription="Image 3"
+                android:padding="8dp" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img5"
+                android:contentDescription="Image 3"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ic_layout"
+        app:layout_constraintEnd_toStartOf="@id/ic_layout"
+        app:layout_constraintBottom_toBottomOf="@id/ic_layout"
+        android:padding="10dp"
+        android:text="Pelajar SMKN 24 Jakarta, Kelas XII Rekayasa Perangkat Lunak"/>
+
+    <TextView
+        android:id="@+id/text_target"
+        android:layout_marginTop="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ic_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Target Project Untuk Tahun Ini"
+        android:layout_marginStart="10px"
+        android:textColor="#4287f5"
+        android:textSize="16sp"/>
+    <ScrollView
+        android:id="@+id/target_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/text_target"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="5dp">
+
+        <!-- LinearLayout untuk konten scroll -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="4px">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img1"
+                    android:contentDescription="Image 1"
+                    android:padding="8dp"
+                    />
+                <TextView
+                    android:layout_marginStart="10px"
+                    android:layout_width="500px"
+                    android:layout_height="match_parent"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="4px">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img2"
+                    android:contentDescription="Image 1"
+                    android:padding="8dp"
+                    />
+                <TextView
+                    android:layout_marginStart="10px"
+                    android:layout_width="500px"
+                    android:layout_height="match_parent"
+
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="4px">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img4"
+                    android:contentDescription="Image 1"
+                    android:padding="8dp"
+                    />
+                <TextView
+                    android:layout_marginStart="10px"
+                    android:layout_width="500px"
+                    android:layout_height="match_parent"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="4px">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img2"
+                    android:contentDescription="Image 1"
+                    android:padding="8dp"
+                    />
+                <TextView
+                    android:layout_marginStart="10px"
+                    android:layout_width="500px"
+                    android:layout_height="match_parent"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="4px">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img5"
+                    android:contentDescription="Image 1"
+                    android:padding="8dp"
+                    />
+                <TextView
+                    android:layout_marginStart="10px"
+                    android:layout_width="500px"
+                    android:layout_height="match_parent"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <TextView
+        android:id="@+id/footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:paddingHorizontal="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pemrograman Perangkat Bergerak - Semester Ganjil - SMKN 24 Jakarta @2025"
+        android:textSize="12sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
