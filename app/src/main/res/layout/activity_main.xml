@@ -146,6 +146,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginVertical="4px">
+
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -153,11 +154,18 @@
                     android:contentDescription="Image 1"
                     android:padding="8dp"
                     />
-                <TextView
+
+                <!-- Ganti TextView menjadi Button untuk membuka CalculatorActivity -->
+                <Button
+                    android:id="@+id/btn_open_calculator"
+                    android:layout_width="300px"
+                    android:layout_height="200px"
                     android:layout_marginStart="10px"
-                    android:layout_width="500px"
-                    android:layout_height="match_parent"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"/>
+                    android:backgroundTint="#301DDC"
+                    android:text="Open Calculator"
+                    android:textAlignment="center"
+                    app:cornerRadius="2dp"
+                    app:iconSize="25dp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

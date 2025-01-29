@@ -1,5 +1,6 @@
 package com.example.tekniklayoutfiqrifauziilham
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -19,9 +20,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         val btnClose = findViewById<Button>(R.id.btn_keluar)
+        val btnOpenCalculator = findViewById<Button>(R.id.btn_open_calculator)
 
         btnClose.setOnClickListener {
             finish()
+        }
+
+        // Menambahkan Intent untuk membuka CalculatorActivity
+        btnOpenCalculator.setOnClickListener {
+            val intent = Intent(this, CalculatorActivity::class.java)
+            startActivity(intent)
         }
     }
 }
