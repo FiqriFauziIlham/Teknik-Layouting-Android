@@ -7,4 +7,6 @@
     <color name="white1">#EFEDEB</color>
     <color name="red">#780C28</color>
     <color name="blue">#23486A</color>
+    <color name="orange">#DF6D14</color>
+    <color name="gray_light">#727D73</color>
 </resources>

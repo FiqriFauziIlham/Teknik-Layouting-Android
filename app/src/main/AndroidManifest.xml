@@ -15,6 +15,15 @@
         android:theme="@style/Theme.TeknikLayoutFiqriFauziIlham"
         tools:targetApi="31">
         <activity
+            android:name=".EditNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddNoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
