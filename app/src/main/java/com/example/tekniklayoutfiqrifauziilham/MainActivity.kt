@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val btnClose = findViewById<Button>(R.id.btn_keluar)
         val btnOpenCalculator = findViewById<Button>(R.id.btn_open_calculator)
         val btnOpenNote = findViewById<Button>(R.id.btn_open_note)
+        val btnOpenOurBook = findViewById<Button>(R.id.btn_open_ourbook)
 
         btnClose.setOnClickListener {
             finish()
@@ -44,6 +45,15 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             } catch (e: Exception) {
                 Log.e("MainActivity", "Error opening NoteActivity", e)
+            }
+        }
+
+        btnOpenOurBook.setOnClickListener {
+            try {
+                val intent = Intent(this, MainBook::class.java)
+                startActivity(intent)
+            } catch (e: Exception) {
+                Log.e("MainActivity", "Error opening MainBook", e)
             }
         }
     }

@@ -192,19 +192,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginVertical="4px">
+                android:layout_marginVertical="4dp">
+
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/img4"
-                    android:contentDescription="Image 1"
-                    android:padding="8dp"
-                    />
-                <TextView
-                    android:layout_marginStart="10px"
-                    android:layout_width="500px"
-                    android:layout_height="match_parent"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and."/>
+                    android:src="@drawable/img3"
+                    android:contentDescription="Image 3"
+                    android:padding="8dp" />
+
+                <Button
+                    android:id="@+id/btn_open_ourbook"
+                    android:layout_width="188dp"
+                    android:layout_height="43dp"
+                    android:backgroundTint="@color/orange"
+                    android:text="Open OurBook"
+                    android:textColor="@color/white" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
